@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DiStory - Aplikasi berbagi cerita seputar Dicoding" />
+    <meta name="theme-color" content="#4f46e5" />
+    <title>DiStory - Berbagi Cerita</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script type="module" crossorigin src="/assets/index-C0aFsyuE.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Dwyj2f8l.css">
+  </head>
+  <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Lewati ke konten utama</a>
+
+    <div id="app">
+      <!-- Header -->
+      <header class="app-header" role="banner">
+        <div class="header-container">
+          <a href="#/" class="brand" aria-label="DiStory - Beranda">
+            <span class="brand-icon" aria-hidden="true">📖</span>
+            <span class="brand-name">DiStory</span>
+          </a>
+          <nav class="main-nav" id="main-nav" aria-label="Navigasi utama">
+            <ul class="nav-list" role="list">
+              <li><a href="#/" class="nav-link" data-page="home">Beranda</a></li>
+              <li id="nav-add" style="display:none"><a href="#/add-story" class="nav-link" data-page="add-story">Tambah Cerita</a></li>
+              <li id="nav-bookmarks" style="display:none"><a href="#/bookmarks" class="nav-link" data-page="bookmarks">📌 Bookmark</a></li>
+              <li id="nav-login"><a href="#/login" class="nav-link" data-page="login">Masuk</a></li>
+              <li id="nav-register"><a href="#/register" class="nav-link" data-page="register">Daftar</a></li>
+              <li id="nav-logout" style="display:none">
+                <button id="logout-btn" class="nav-btn-logout" type="button">Keluar</button>
+              </li>
+            </ul>
+          </nav>
+          <div class="header-actions">
+            <!-- Push Notification Toggle -->
+            <button
+              id="push-toggle-btn"
+              class="btn-icon"
+              type="button"
+              aria-label="Aktifkan notifikasi push"
+              title="Notifikasi"
+              style="display:none;"
+            >
+              <span id="push-icon" aria-hidden="true">🔔</span>
+            </button>
+            <!-- PWA Install Button -->
+            <button
+              id="install-btn"
+              class="btn btn-primary btn-sm"
+              type="button"
+              style="display:none;"
+              aria-label="Pasang aplikasi DiStory"
+            >
+              <span aria-hidden="true">📲</span> Pasang
+            </button>
+            <!-- Hamburger -->
+            <button class="hamburger" id="hamburger" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="main-nav" type="button">
+              <span class="hamburger-bar" aria-hidden="true"></span>
+              <span class="hamburger-bar" aria-hidden="true"></span>
+              <span class="hamburger-bar" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main content -->
+      <main id="main-content" tabindex="-1" role="main">
+        <div id="page-container" class="page-container"></div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="app-footer" role="contentinfo">
+        <p>&copy; 2024 DiStory. Dibuat untuk submission Dicoding.</p>
+      </footer>
+    </div>
+
+  </body>
+</html>
