@@ -1,14 +1,15 @@
 // DiStory Service Worker
-const CACHE_NAME = 'distory-v1';
-const DYNAMIC_CACHE = 'distory-dynamic-v1';
+const BASE_PATH = '/distory-app';
+const CACHE_NAME = 'distory-v2';
+const DYNAMIC_CACHE = 'distory-dynamic-v2';
 
 // App shell files to cache on install
 const APP_SHELL = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/icon-192.png',
-  '/icon-512.png',
+  `${BASE_PATH}/`,
+  `${BASE_PATH}/index.html`,
+  `${BASE_PATH}/manifest.json`,
+  `${BASE_PATH}/icon-192.png`,
+  `${BASE_PATH}/icon-512.png`,
 ];
 
 // =====================
@@ -84,7 +85,7 @@ async function cacheFirstWithNetworkFallback(request) {
   } catch {
     // Return offline fallback for navigation requests
     if (request.mode === 'navigate') {
-      const cached = await caches.match('/');
+      const cached = await caches.match(`${BASE_PATH}/`);
       return cached || new Response('<h1>Offline</h1><p>Tidak ada koneksi internet.</p>', {
         headers: { 'Content-Type': 'text/html' }
       });
@@ -135,8 +136,8 @@ self.addEventListener('push', (event) => {
     title: 'DiStory',
     options: {
       body: 'Ada cerita baru!',
-      icon: '/icon-192.png',
-      badge: '/icon-192.png',
+      icon: `${BASE_PATH}/icon-192.png`,
+      badge: `${BASE_PATH}/icon-192.png`,
     },
   };
 
@@ -147,8 +148,8 @@ self.addEventListener('push', (event) => {
         title: payload.title || data.title,
         options: {
           body: payload.options?.body || data.options.body,
-          icon: '/icon-192.png',
-          badge: '/icon-192.png',
+          icon: `${BASE_PATH}/icon-192.png`,
+          badge: `${BASE_PATH}/icon-192.png`,
           data: payload.options?.data || {},
           actions: [
             {
@@ -182,7 +183,7 @@ self.addEventListener('notificationclick', (event) => {
   if (event.action === 'close') return;
 
   const storyId = event.notification.data?.storyId;
-  const url = storyId ? `/#/stories/${storyId}` : '/';
+  const url = storyId ? `${BASE_PATH}/#/stories/${storyId}` : `${BASE_PATH}/`;
 
   event.waitUntil(
     clients.matchAll({ type: 'window', includeUncontrolled: true }).then((clientList) => {

@@ -1,0 +1,16 @@
+Nama: I Kadek Teo Prayoga Kartika
+Email: teoprayoga@gmail.com
+URL: https://teoprayoga.github.io/distory-app/
+
+Tentang Aplikasi DiStory:
+- Aplikasi berbagi cerita berbasis Single-Page Application (SPA)
+- Menggunakan arsitektur MVP (Model-View-Presenter)
+- Peta digital menggunakan Leaflet.js (tile layer: OpenStreetMap, Esri Satellite, OpenTopoMap)
+- Fitur kamera langsung untuk mengambil foto
+
+Catatan Map Service:
+- Menggunakan Leaflet.js (open source, tidak memerlukan API key)
+- Tile layers:
+  1. OpenStreetMap - gratis, tanpa API key
+  2. Esri World Imagery (Satellite) - gratis untuk penggunaan non-komersial
+  3. OpenTopoMap - gratis, tanpa API key

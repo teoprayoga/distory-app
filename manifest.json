@@ -2,8 +2,8 @@
   "name": "DiStory - Berbagi Cerita Dicoding",
   "short_name": "DiStory",
   "description": "Aplikasi berbagi cerita seputar Dicoding. Temukan dan bagikan pengalaman belajarmu!",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "/distory-app/",
+  "scope": "/distory-app/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#f8fafc",
@@ -11,19 +11,19 @@
   "lang": "id",
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "/distory-app/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/distory-app/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon-maskable-512.png",
+      "src": "/distory-app/icon-maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -31,14 +31,14 @@
   ],
   "screenshots": [
     {
-      "src": "/screenshot-wide.png",
+      "src": "/distory-app/screenshot-wide.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
       "label": "DiStory beranda - tampilan desktop"
     },
     {
-      "src": "/screenshot-narrow.png",
+      "src": "/distory-app/screenshot-narrow.png",
       "sizes": "390x844",
       "type": "image/png",
       "form_factor": "narrow",
@@ -50,15 +50,15 @@
       "name": "Tambah Cerita",
       "short_name": "Tambah",
       "description": "Bagikan cerita barumu",
-      "url": "/#/add-story",
-      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+      "url": "/distory-app/#/add-story",
+      "icons": [{ "src": "/distory-app/icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Bookmark",
       "short_name": "Bookmark",
       "description": "Lihat cerita yang disimpan",
-      "url": "/#/bookmarks",
-      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+      "url": "/distory-app/#/bookmarks",
+      "icons": [{ "src": "/distory-app/icon-192.png", "sizes": "192x192" }]
     }
   ]
 }
